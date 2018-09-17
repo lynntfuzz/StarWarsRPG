@@ -53,24 +53,28 @@ $(document).ready(function() {
             var row = $("<div>");
             row.addClass("row enemy_row");
             enemy_panel.append(row);
-
+            $('#selectchar').text("");
+            $('#selectenemy').text("(Select One)");
             $('.player_card:not(.player)').addClass("enemy"); // add class "enemy" to all non-players
 
             var enemies = $('.enemy');
             enemies.remove();
             enemies.each(function() {
                 console.log($(this).attr("value"));
-                enemy_panel.append($(this));
+                row.append($(this));
                 $(this).click( function(event) {
                     var selected = $(this).attr("value")
                     console.log("*************Defender selected = " + selected);
                     setDefender(selected);
+                    $('#selectenemy').text("");
                     var querystring = ".player_card." + selected.replace(/\s/g, "");
                     console.log("looking up " + querystring)
                     var defender = $(querystring).remove();
                     defender.removeClass("enemy");
+                    defender.removeClass("col-xs-3");
                     defender.addClass("defender");
-                    $(".defender_panel").append(defender);
+                    //defender.wrap($("<div class=\"col-sm-1\">"));
+                    $("#defender_row").append(defender);
 
                 });
             })

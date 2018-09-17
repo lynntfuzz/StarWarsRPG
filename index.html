@@ -21,22 +21,29 @@
 </div>
 
 <div class="player_panel container">
-    <h3 class="instruction_heading">Your character:</h3>
+    <h3 class="instruction_heading">Your character <span id="selectchar">(Select One)</span>:</h3>
 </div>    
 
 
 <div class="enemy_panel container">
-    <h3 class="instruction_heading">Enemies To Attack:</h3>
+    <div class="row">
+    <h3 class="instruction_heading">Enemies To Attack<span id="selectenemy"></span>:</h3>
+    </div>    
 </div>
 
-<div class="defender_panel">
-        
-</div>
-
-
-<div class="bottom_panel">
+<div class="defender_panel container">
+        <div class="row">
         <button id="attack_button">Attack</button>
+        </div>
+        <div class="row">
         <h3 class="instruction_heading">Defender:</h3>
+        </div>
+        <div class="row col-xs-1" id="defender_row"></div>
+</div>
+
+
+<div class="results_panel">       
+        <h3 class="instruction_heading">Results:<span id="results"></span></h3>
 </div>
 
 </body>

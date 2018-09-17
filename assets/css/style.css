@@ -1,26 +1,35 @@
 
+body {
+    background-image: url("../images/background.jpg");
+}
+
 div {
     margin: 5px;
     /* padding: 10px; */
 }
 
+.instruction_heading {
+    padding: 10px;
+    color: white;
+}
 
 .player_card {
     border: solid 2px blue;
+    background: white;
 }
 
 #fight_panel {
-    border: red solid 2px;
+    /* border: red solid 2px; */
 }
 
 .player {
-    background:green;
+    /* background:green; */
 }
 
 .enemy {
-    background: red;
+    /* background: red; */
 }
 
 .defender {
-    background:purple;
+    /* background:purple; */
 }
