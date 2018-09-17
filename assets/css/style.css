@@ -1,0 +1,26 @@
+
+div {
+    margin: 5px;
+    /* padding: 10px; */
+}
+
+
+.player_card {
+    border: solid 2px blue;
+}
+
+#fight_panel {
+    border: red solid 2px;
+}
+
+.player {
+    background:green;
+}
+
+.enemy {
+    background: red;
+}
+
+.defender {
+    background:purple;
+}
