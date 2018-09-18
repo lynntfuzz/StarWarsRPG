@@ -14,15 +14,10 @@ $(document).ready(function() {
     var darth_maul = new game_character("Darth Maul", 180, 9, 25);
 
     var all_players = [obi, luke, darth_sid, darth_maul];
-
-    function attack(character1, character2) {
-
-    }
    
     function setDefender(name) {
         console.log("Setting defender = " + name);
         defending_character = lookUpPlayer(name);
-
     }
     
     var current_character = null;
@@ -73,7 +68,6 @@ $(document).ready(function() {
                     defender.removeClass("enemy");
                     defender.removeClass("col-xs-3");
                     defender.addClass("defender");
-                    //defender.wrap($("<div class=\"col-sm-1\">"));
                     $("#defender_row").append(defender);
 
                 });
@@ -85,20 +79,15 @@ $(document).ready(function() {
     
     
     $("#attack_button").click(function(evt) {
-        console.log(current_character.name + " attacks " + defending_character.name);
-        logPlayer(current_character);
-        logPlayer(defending_character);
+   
         current_character.attack_power += current_character.attack_power;
         current_character.health_points -= defending_character.counter_attack_power;
-        console.log("after fight " + current_character.name + " has " + current_character.health_points); 
         defending_character.health_points = defending_character.health_points - current_character.attack_power;  
-        console.log("after fight " + defending_character.name + " has " + defending_character.health_points); 
         var cpid = "#HP" + current_character.name.replace(/\s/g, "");
         var dpid = "#HP" + defending_character.name.replace(/\s/g, "");
         $(cpid).text(current_character.health_points);
         $(dpid).text(defending_character.health_points);
-        logPlayer(current_character);
-        logPlayer(defending_character);
+
         if(current_character.health_points<=0) {
             console.log(current_character.name + "is dead, you lose");
         }

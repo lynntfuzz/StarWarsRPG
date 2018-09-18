@@ -27,9 +27,9 @@ div {
 }
 
 .enemy {
-    /* background: red; */
+    border: solid 2px red;
 }
 
 .defender {
-    /* background:purple; */
+    border: solid 2px yellow;
 }
