@@ -57,19 +57,6 @@ $(document).ready(function() {
             cc_div.addClass("player"); // mark the chosen player with class "player"
             //logResults("You selected player " + player.name);
             setCurrentScene(SCENE2);
-            
-            for (var i = 0; i < 100; i++) {
-                if (i % 3 == 0 && i % 5 === 0) console.log("FizzBuzz");
-                else if (i % 3 === 0) console.log("Fizz");
-                else if (i % 5 === 0) console.log("Buzz");
-            }
-            
-            var result = "";
-            for (var i = 0; i < 100; i++) {
-                if (i % 3 === 0) result = result + "Fizz";
-                if (i % 5 === 0) result = result + "Buzz";
-                result = "";
-            }
 
             // Mark the remaining players as enemy, move them all and add new listener
             $('.player_card:not(.player)').addClass("enemy"); // add class "enemy" to all non-players
