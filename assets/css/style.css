@@ -1,31 +1,32 @@
 
 body {
     background-image: url("../images/background.jpg");
+    margin: auto;
+    width: 80%;
+    padding: 20px;
 }
 
-div {
-    margin: 5px;
-    /* padding: 10px; */
+#results_label {
+    color: white;
 }
 
 .instruction_heading {
-    padding: 10px;
     color: white;
 }
 
 .player_card {
     border: solid 2px blue;
     background: white;
+    width: 125px;
+    height:160px;
+    align-content: center;
 }
 
-#fight_panel {
-    /* border: red solid 2px; */
-}
-
-.player {
-    /* background:green; */
-}
-
+/* .results_panel {
+    border:solid 1px lightgray;
+    height:400px;
+    width: 500px;
+} */
 .enemy {
     border: solid 2px red;
 }

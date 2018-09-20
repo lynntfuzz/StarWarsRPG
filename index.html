@@ -8,43 +8,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
     <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
 
 <!-- Jumbotron for Title -->
-<div class="jumbotron">
+<!-- <div class="jumbotron">
     <h1 class="text-center">Star Wars RPG</h1>
     <h3 class="text-center">Click on a character</h3>
-</div>
-
-<div class="player_panel container">
-    <h3 class="instruction_heading">Your character <span id="selectchar">(Select One)</span>:</h3>
-</div>    
-
-
-<div class="enemy_panel container">
+    <h5 id="scene">Scene 1</h5>
+</div> -->
+<div class="container">
     <div class="row">
-    <h3 class="instruction_heading">Enemies To Attack<span id="selectenemy"></span>:</h3>
-    </div>    
+        <div class="col-md-6">
+            <div class="left_panel">
+                <div class="player_panel">
+                    <div class="row"><h3 class="instruction_heading">Your character <span id="selectchar">(Select One)</span>:</h3></div>
+                    <div class="row" id="player_row"></div>
+                </div>    
+
+                <div class="enemy_panel">
+                    <div class="row"><h3 class="instruction_heading">Enemies To Attack:<span id="selectenemy"></span></h3></div>
+                    <div class="row" id="enemy_row"></div>
+                </div>
+
+                <div class="defender_panel">
+                        <div class="row"><button class="btn btn-primary disabled attack_button">Attack</button></div>
+                        <div class="row"><h3 class="instruction_heading">Defender:</h3></div>
+                        <div class="row col-xs-1" id="defender_row"></div>
+                </div>
+            </div>
+        </div> <!-- end of left half column -->
+        <div class="col-md-6">
+            <div class="results_panel">  
+                    <div class="row"><button class="btn btn-primary reset_button">Reset</button></div>      
+                    <div class="row"><h3 class="instruction_heading">Results:</h3></div>
+                    <div class="row"></div><div class="results container"></div>
+            </div>
+        </div> <!-- end of right half column -->
+    </div>   <!-- end of main large row -->
 </div>
-
-<div class="defender_panel container">
-        <div class="row">
-        <button id="attack_button">Attack</button>
-        </div>
-        <div class="row">
-        <h3 class="instruction_heading">Defender:</h3>
-        </div>
-        <div class="row col-xs-1" id="defender_row"></div>
-</div>
-
-
-<div class="results_panel">       
-        <h3 class="instruction_heading">Results:<span id="results"></span></h3>
-</div>
-
 </body>
 </html>
